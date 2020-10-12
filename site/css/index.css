@@ -1,0 +1,48 @@
+body{background-color: white;}
+li {display: inline;}
+
+a#logo {margin-left: 10px;
+    display: inline;
+}
+
+div#date {
+    border-spacing: 10px;
+    border-radius: 10px;
+    border-color: royalblue;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    background-color: rgb(100, 92, 92);
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.grid-container{
+    grid-template-rows: auto auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5px;
+}
+
+.grid-item{
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+
+div#entete {
+    border-radius: 10px;
+    background-color: rgb(100, 92, 92);
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+b:hover {
+    background-color: gold;
+}
+.active {
+    background-color: red;
+}
