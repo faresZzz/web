@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="stylesheet" href="/site/css/index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/site/css/index.css">
     <title>RocketVoyage</title>
 </head>
 <body>
-
-<div>
-<a href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
+<div><a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a></div>
+<div id="entete">
 <nav>
-    <form action="recherche.js" method="get">
-        Destination:<input type="text" value="" autocomplete="on" >
-        <a href="panier.html"><img src="../images/panier.webp"  height="300" width="500" alt="panier"></a>
-
-        <input type="submit" value="Rechercher">
-    </form>
+    <b href="index.html" class="active" >Page d'accueil</b>
+    <b href="contacts.html">Contacts</b>
+    <b href="info.html" >A propos</b>
 </nav>
 </div>
-<div>
-    <nav>
-        <form action="filtre">filtres 
-            
-            Date de depart:<input type="date" value="" >
+<div id="recherche">
+
+</div>
+<div id="date">
+       <form action="recherche.js" method="get">
+        Destination:<input type="text" value="" autocomplete="on" >
     
-            Date de retour:<input type="date" value="" >
+        <input type="submit" value="Rechercher">
+    </form>
+    <nav>
+        <form action="filtre"></form>
             
-            <label for="prix" >Prix</label><input type="range" id="prix" name="prix" min="0" max="1000">
+            Date de depart: <input type="date" value="" >
+    
+            Date de retour: <input type="date" value="" >
+            
+            <label for="prix" >Prix: </label><input type="range" id="prix" name="prix" min="0" max="1000">
         </form>
     </nav>
 </div>
 
-<div>
-    <div>
-    <a href="hotel.html"><img src="../images/hotelparis.jpg" height="300" width="500" alt="hotelparis"> </a>
-    </div>
+<gri class="grid-container">
+    <d1 class="grid-item">
+    <a href="paris.html"><img src="../images/paris.jpg" height="300" width="500" alt="paris"> </a>
+    </d1>
 
-    <div>
-    <a href=""><img src="../images/" alt="hotel 2"></a>
-    </div>  
+    <d2 class="grid-item">
+    <a href="londres.html"><img src="../images/londres.jpg" height="300" width="500" alt="londres"></a>
+    </d2>  
 
-    <div>
-    <a href=""><img src="../images/" alt="hotel 3"></a>
-    </div>
+    <d3 class="grid-item">
+    <a href="venise.html"><img src="../images/venise.jpg" height="300" width="500" alt="venise"></a>
+    </d3>
 
-    <div>
-    <a href=""><img src="../images/" alt="hotel 4"></a>
-    </div>
-    
+    <d4 class="grid-item">
+    <a href="newyork.html"><img src="../images/newyork.jpg" height="300" width="500" alt="newyork"></a>
+    </d4>
+    </gri>
+ <nav1>
 
-</div>
- <div>
-     <nav>
-         <a href="info.html"> A propos</a>
-         <a href="info.html">contacts</a>
-     </nav>
- </div>
+    <panier href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></panier>
+</nav1>
 </body>
 </html>
