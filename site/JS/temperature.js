@@ -6,6 +6,7 @@ function AfficherTemperature()
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+ville+"&appid="+appid+"&units=metric").then(function(reponse)
     {
         json=reponse.json();
+        return json;    
     })
     .then(function(json)
     {

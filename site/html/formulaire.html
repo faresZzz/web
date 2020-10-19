@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de réservation</title>
     <script src="/site/JS/monScript.js"></script>
+    <script src="/site/JS/prix.js"></script>
 </head>
 <body>
-    <form action="recapitulatif.html" method="get">
-        Nom*: <input type="text" name="nom" required > <br>
+    <form action="recapitulatif.html" method="get" onchange="formulaire()">
+        Nom*: <input type="text" id="nom" name="nom" required > <br>
 
-        Prénom*: <input type="text" name="prenom" required  ><br>
+        Prénom*: <input type="text" name="prenom" id="prenom" required  ><br>
 
-        Adresse mail*: <input type="email" name="email" required ><br>
+        Adresse mail*: <input type="email" name="email"  id="email" required ><br>
 
-        Télephone* : <input type="tel" name="téléphone" required ><br>
-        Date de départ*: <input type="date" name="date de départ" required ><br>
-        Date de retour*: <input type="date" name="date de retour" required  ><br>
-        Nombre d'adultes*: <select name="Nombre d'adutes">
+        Télephone* : <input type="tel" name="telephone" id="telephone" required ><br>
+        Date de départ*: <input type="date" name="datededepart" id="datededepart"  required ><br>
+        Date de retour*: <input type="date" name="datederetour" id="datederetour" required  ><br>
+        Nombre d'adultes*: <select name="nbadulte" id="nbadulte">
          <option value="1">1</option>
          <option value="2">2</option>   
          <option value="3">3</option>   
@@ -26,7 +27,7 @@
          <option value="6">6</option>   
          <option value="7">7</option>   
         </select><br>
-        Nombre d'enfants*:  <select name="Nombre d'enfants">
+        Nombre d'enfants*:  <select name="nbenfant" id="nbenfant">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>   
@@ -36,8 +37,8 @@
             <option value="6">6</option>   
             <option value="7">7</option>   
            </select><br>
-        Petit déjeuner* (non par défaut): <input type="checkbox" ><br>
-        Animaux* (non par défaut): <input type="checkbox" ><br>
+        Petit déjeuner* (non par défaut): <input type="checkbox" id="pdej" name="pdej" ><br>
+        Animaux* (non par défaut): <input type="checkbox" id="animaux" name="animaux" ><br>
         Renseignement: <textarea> </textarea> <br>
         <input type="submit" value="Réserver" onclick="unAjout()"> <br>
         <input type="reset" value="Effacer">

@@ -1,0 +1,16 @@
+[
+    { 
+        "ville": "Paris",
+        "prixAdulte":50,
+        "petitDej":1,
+        "animauxOK":"oui",
+        "prixAnimaux":5  
+    },
+    { 
+        "ville":"Londres",
+        "prixAdulte":50,
+        "prixPD":0,
+        "animauxOK":"oui",
+        "prixAnimaux":5  
+    }
+]
