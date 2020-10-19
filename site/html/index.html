@@ -6,19 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/site/css/index.css">
     <title>RocketVoyage</title>
+    
 </head>
 <body>
-<div><a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a></div>
-<div id="entete">
-<nav>
-    <b href="index.html" class="active" >Page d'accueil</b>
-    <b href="contacts.html">Contacts</b>
-    <b href="info.html" >A propos</b>
-</nav>
-</div>
-<div id="recherche">
+<header><div><a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a></div>
+    <a id="inscrire" href="inscription.html">S'inscrire</a>
+    <a id="connexion" href="connexion.html" >Se connecter</a></header>
 
-</div>
 <div id="date">
        <form action="recherche.js" method="get">
         Destination:<input type="text" value="" autocomplete="on" >
@@ -26,37 +20,56 @@
         <input type="submit" value="Rechercher">
     </form>
     <nav>
-        <form action="filtre"></form>
+        <form action="filtre">
             
             Date de depart: <input type="date" value="" >
     
             Date de retour: <input type="date" value="" >
-            
-            <label for="prix" >Prix: </label><input type="range" id="prix" name="prix" min="0" max="1000">
+            <br>
+            <label for="prix" >Prix: </label><input type="range" id="prix" name="prix" min="0" max="500">
+            <br>
+            Petit déjeuner* (non par défaut): <input type="checkbox" value="">
+            <br>
+            Animaux* (non par défaut): <input type="checkbox">
         </form>
     </nav>
 </div>
 
-<gri class="grid-container">
-    <d1 class="grid-item">
+
+<div class="grid-container">
+    <div class="grid-item">
     <a href="paris.html"><img src="../images/paris.jpg" height="300" width="500" alt="paris"> </a>
-    </d1>
+    </div>
 
-    <d2 class="grid-item">
+    <div class="grid-item">
     <a href="londres.html"><img src="../images/londres.jpg" height="300" width="500" alt="londres"></a>
-    </d2>  
+    </div>  
 
-    <d3 class="grid-item">
+    <div class="grid-item">
     <a href="venise.html"><img src="../images/venise.jpg" height="300" width="500" alt="venise"></a>
-    </d3>
+    </div>
 
-    <d4 class="grid-item">
+    <div class="grid-item">
     <a href="newyork.html"><img src="../images/newyork.jpg" height="300" width="500" alt="newyork"></a>
-    </d4>
-    </gri>
- <nav1>
+    </div>
+</div>
+ <nav>
 
-    <panier href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></panier>
-</nav1>
+    <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+</nav>
+<footer>
+<a href="#">Aller en haut de page</a>
+<div id="entete">
+<nav>
+    <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
+    <a id="barre2" href="contacts.html">Contacts</a>
+    <a id="barre3" href="info.html" >A propos</a>
+</nav>
+</div>
+</footer>
+
+
+
+
 </body>
 </html>

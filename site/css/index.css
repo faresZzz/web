@@ -20,7 +20,6 @@ div#date {
 
 
 .grid-container{
-    grid-template-rows: auto auto;
     display: grid;
     grid-template-columns: auto auto;
     padding: 5px;
@@ -40,7 +39,21 @@ div#entete {
     padding: 14px 16px;
     text-decoration: none;
 }
-b:hover {
+a#barre1:hover {
+    background-color: gold;
+}
+.active {
+    background-color: red;
+}
+
+a#barre2:hover {
+    background-color: gold;
+}
+.active {
+    background-color: red;
+}
+
+a#barre3:hover {
     background-color: gold;
 }
 .active {
