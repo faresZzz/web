@@ -5,13 +5,25 @@ a#logo {margin-left: 10px;
     display: inline;
 }
 
+#headerlinks {
+    width: 50%;
+    height: 65px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 5vw;
+}
+
+
 div#date {
     border-spacing: 10px;
     border-radius: 10px;
-    border-color: royalblue;
     margin-top: 30px;
     margin-bottom: 0px;
-    background-color: rgb(100, 92, 92);
+    background-color: rgb(181, 194, 189);
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -31,26 +43,55 @@ div#date {
     text-align: center;
 }
 
-div#entete {
+.grayscale{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.grayscale:hover  {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+
+div#basdepage {
     border-radius: 10px;
-    background-color: rgb(100, 92, 92);
+    background-color: rgb(181, 194, 189);
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 a#barre1:hover {
-    background-color: gold;
+    background-color: gray;
 }
 .active {
-    background-color: red;
+    background-color: rgb(248, 238, 246);
 }
 
 a#barre2:hover {
-    background-color: gold;
+    background-color: gray;
 }
 .active {
-    background-color: red;
+    background-color:rgb(248, 238, 246);
 }
 
 
+button#recherchebouton {
+    height: 25px;
+    width: 75px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 0;
+    border: none;
+    margin-left: -6px;
+}
+
+button#recherchebouton:hover {
+    background-color: rgb(212, 212, 212);
+    cursor: pointer;
+}
+#recherche {
+    width: 40%;
+}
