@@ -1,0 +1,75 @@
+#content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+#registerSuccess{
+    margin-left:15px;
+    color:green;
+    width:50%;
+    font-style: italic;
+    margin-left:50%;
+    position:absolute;
+    top:40%;
+}
+#imagefond {
+    margin-top: 80px;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+}
+
+#blocresa {
+    position: absolute;
+    text-align: center;
+    left: 25vw;
+    top: 25vh;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.9;
+    border-radius: 5px;
+    width: 50vw;
+    height: 60vh;
+}
+#departh2 {
+    float: left;
+    margin-left: 15%;
+}
+#depart {
+    float: left;
+    margin-left: 15%;
+}
+
+#arrivee {
+    right: 10%;
+}
+
+#arriveeh2 {
+    right: 10%;
+}
+#nombrevoy {
+    width: 60%;
+    text-align: left;
+    margin-left: 15%;
+    margin-top: 2%;
+    margin-bottom: 7%;
+}
+
+#h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#prixtot {
+    margin-top: -2%;
+}
+#prix{
+     margin-left:2%;
+     font-size: 2em;
+     font-weight: bold;
+}
+#confirmation{
+    margin-top:3%;
+}
+#notconnected{
+    position: absolute;
+}
