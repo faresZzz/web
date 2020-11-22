@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/site/JS/monScript.js"></script>
+    <script src="/site/JS/panier.js"></script>
+    <script src="/site/JS/connexion.js"></script>
 </head>
-<body>
+<body onload="creeUnCompte()">
     <p id="one">bonjour a tous</p>
     <form action="entraiement.html" method="get">
         Nom*: <input type="text" name="nom" required > <br>
@@ -16,13 +17,24 @@
 
     </form>
 
-    <ul id="myList">
-        <li>Coffee</li>
-        <li>Tea</li>
-    </ul>
+    <ul id="myList"></ul>
     <button onclick="unAjout()">Try it</button>
+<br>
+<br>
+<input id="username" type="search" placeholder="pseudo">
+<input id="mdp" type="search" placeholder="mot de passse">
+<input id="confirme" type="search" placeholder="confirmer le mot de passse">
 
-    
+<button id="recherchebouton" onclick="connexion()"><i class=""></i>Rechercher</button>
+<button onclick="test()">test</button>
+<button onclick="deconnexion()">Deconnexion</button>  
+<br><br><br>
+<input type="text" id="voyage">
+<input type="text" id="prix">
+
+<button id="pna" onclick="setPanier()">ajouter au panier</button> 
+ <button if="aff" onclick="Panier()">afficher le panier</button>
+ <div id="precedent"></div>
 </body>
 
 </html>

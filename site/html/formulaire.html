@@ -8,16 +8,25 @@
     <script src="/site/JS/prix.js"></script>
 </head>
 <body>
+    <header>
+        <div>
+            <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
+        </div>
+        <a id="inscrire" href="inscription.html">S'inscrire</a>
+        <a id="connexion" href="connexion.html" >Se connecter</a>
+        <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+
+    </header>
     <form action="recapitulatif.html" method="get" onchange="formulaire()">
-        Nom*: <input type="text" id="nom" name="nom" required > <br>
+        Nom*: <input type="text" id="nom" name="nom"  > <br>
 
-        Prénom*: <input type="text" name="prenom" id="prenom" required  ><br>
+        Prénom*: <input type="text" name="prenom" id="prenom"   ><br>
 
-        Adresse mail*: <input type="email" name="email"  id="email" required ><br>
+        Adresse mail*: <input type="email" name="email"  id="email"  ><br>
 
-        Télephone* : <input type="tel" name="telephone" id="telephone" required ><br>
-        Date de départ*: <input type="date" name="datededepart" id="datededepart"  required > <br>
-        Date de retour*: <input type="date" name="datederetour" id="datederetour" required  ><br>
+        Télephone* : <input type="tel" name="telephone" id="telephone"  ><br>
+        Date de départ*: <input type="date" name="datededepart" id="datededepart"   > <br>
+        Date de retour*: <input type="date" name="datederetour" id="datederetour"   ><br>
         Nombre d'adultes*: <select name="nbadulte" id="nbadulte">
          <option value="1">1</option>
          <option value="2">2</option>   
@@ -43,8 +52,20 @@
         <input type="submit" value="Réserver" onclick="unAjout()"> <br>
         <input type="reset" value="Effacer">
     </form>
-<p id="total" name="total">
-    
+<p id="total" name="total"></p>
+<p>
+<button id="ajoutPanier" onclick="ajoutPanier()">Ajouter au panier</button>
 </p>
+<footer>
+
+    <input type="button" value="remonter" id="monBouton"/>
+    
+    <div id="basdepage">
+    <nav>
+        <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
+        <a id="barre2" href="contacts.html">Contacts et à propos</a>
+    </nav>
+    </div>
+</footer>
 </body>
 </html>

@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>infos</title>
 </head>
 <body>
+    <header>
+        <div>
+            <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
+        </div>
+        <a id="inscrire" href="inscription.html">S'inscrire</a>
+        <a id="connexion" href="connexion.html" >Se connecter</a>
+        <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+
+    </header>
 <div >
     <form action="connexion.js" method="get">
-     Adresse mail :<input type="text" name="Adresse mail" value="" autocomplete="on" >
+     pseudo :<input type="text" name="pseudo" value="" autocomplete="on" >
      Mot de passe :<input type="password" name='motdpasse' value="" >
 
      <input type="submit" value="Se connecter">
  </form>
 </div>
+<footer>
 
+    <input type="button" value="remonter" id="monBouton"/>
+    
+    <div id="basdepage">
+    <nav>
+        <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
+        <a id="barre2" href="contacts.html">Contacts et à propos</a>
+    </nav>
+    </div>
+    </footer>
 </body>
 </html>

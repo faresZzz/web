@@ -1,0 +1,16 @@
+[
+    {
+        "prenom":"jean",
+        "nom":"pont",
+        "pseudo":"user1",
+        "mail":"jean.dupont@mail.wo",
+        "motDePasse":"oui"
+    },
+    {
+        "prenom":"jean",
+        "nom":"bon",
+        "pseudo":"user2",
+        "mail":"jean.bon@mail.wo",
+        "motDePasse":"non"
+    }
+]

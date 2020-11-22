@@ -6,11 +6,22 @@
     <title>infos</title>
 </head>
 <body>
+    <header>
+        <div>
+            <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
+        </div>
+        <a id="inscrire" href="inscription.html">S'inscrire</a>
+        <a id="connexion" href="connexion.html" >Se connecter</a>
+        <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+
+    </header>
     <div>
         <form action="inscription.js" method="get">
             Prénon : <input type="text" name="prenom" value="" autocomplete="on" >
             <br>   
             Nom : <input type="text" name="Nom" value="" autocomplete="on" >
+            <br>
+            Pseudo : <input type="text" name="Pseudo" value="" autocomplete="on" >
             <br>
             Adresse mail : <input type="text" name="email" value="" autocomplete="on" >
             <br>
@@ -21,6 +32,16 @@
          <input type="submit" value="S'inscire">
      </form>
     </div>
+    <footer>
 
+        <input type="button" value="remonter" id="monBouton"/>
+        
+        <div id="basdepage">
+        <nav>
+            <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
+            <a id="barre2" href="contacts.html">Contacts et à propos</a>
+        </nav>
+        </div>
+    </footer>
 </body>
 </html>
