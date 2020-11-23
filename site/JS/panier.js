@@ -1,3 +1,4 @@
+
 function isconnect(){
     if (sessionStorage.getItem("estConnecte")==False){
         document.getElementById("connect").innerHTML= "veuillez vous connecter";
@@ -42,3 +43,10 @@ function setPanier(){
     console.log(voyage);
     document.cookie="panier ="+JSON.stringify(voyage)+";path=/";
 }
+
+
+//function temps(){
+ // import {  AfficherTemperature } from "temperature.mjs";
+ // console.log(AfficherTemperature("lyon"));
+//}
+

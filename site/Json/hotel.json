@@ -8,8 +8,22 @@
     },
     { 
         "ville":"Londres",
-        "prixAdulte":50,
+        "prixAdulte":40,
         "prixPD":0,
+        "animauxOK":"oui",
+        "prixAnimaux":5  
+    },
+    { 
+        "ville": "New York",
+        "prixAdulte":100,
+        "petitDej":1,
+        "animauxOK":"oui",
+        "prixAnimaux":5  
+    },
+    { 
+        "ville": "Venise",
+        "prixAdulte":70,
+        "petitDej":1,
         "animauxOK":"oui",
         "prixAnimaux":5  
     }
