@@ -1,6 +1,6 @@
-export function AfficherTemperature(ville)
+function AfficherTemperature()
 {
-    //let ville="Lyon";
+    let ville="Lyon";
     let appid="bfb725a2d2eb425c0443cbcdf5c91e8f";
 
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+ville+"&appid="+appid+"&units=metric").then(function(reponse)
@@ -10,6 +10,6 @@ export function AfficherTemperature(ville)
     })
     .then(function(json)
     {
-        return document.getElementById("temp").innerHTML="La temperature à " +json["name"]+" est de "+json["main"]["temp"]+" °C"
+        console.log("La temperature à " +json["name"]+" est de "+json["main"]["temp"]+" °C");
     })
 }

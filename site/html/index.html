@@ -21,53 +21,35 @@
 
 <div id="date">
     <div id="recherche">
-        <input id="recherche" type="search" placeholder="Rechercher une destination">
-        <button id="recherchebouton" onclick="search()"><i class=""></i>Rechercher</button>
+        <input id="recherchecase" type="search"  placeholder="Recherche destination">
+        <button id="recherchebouton" onclick="filtre()"><i class=""></i>Rechercher</button>
     </div>
-    </form>
+
     <nav>
         <form action="filtre">
-            
-            Date de depart: <input type="date" value="" >
+            <!--
+            Date de depart: <input type="date" id="datedep"  onchange="filtre()">
     
-            Date de retour: <input type="date" value="" >
+            Date de retour: <input type="date" id="datefin"   onchange="filtre()">
+            <br>-->
+            <label for="prix" >Prix: </label><input type="range" id="prix" name="prix" min="0" max="1000"  value="3000" onchange="filtre(); affichebarrePrix()" >
+            <span id="afficheprix"> 1000 euros</span>
             <br>
-            <label for="prix" >Prix: </label><input type="range" id="prix" name="prix" min="0" max="500">
+            Petit déjeuner* (non par défaut): <input type="checkbox" id="petidej"  onclick="filtre()">
             <br>
-            Petit déjeuner* (non par défaut): <input type="checkbox" value="">
-            <br>
-            Animaux* (non par défaut): <input type="checkbox">
+            Animaux* (non par défaut): <input type="checkbox" id="animaux"  onclick="filtre()">
         </form>
     </nav>
 </div>
 
-
-<!--<div class="grid-container">
-    <div class="grid-item">
-    <div id="im" class="grayscale"><a href="formulaire.html"><img src="../images/paris.jpg" height="300" width="500" alt="paris"> </a>
-    </div></div>
-
-    <div class="grid-item">
-    <div id="im" class="grayscale"><a href="formulaire.html"><img src="../images/londres.jpg" height="300" width="500" alt="londres"></a>
-    </div></div> 
-
-    <div class="grid-item">
-    <div id="im" class="grayscale"><a href="formulaire.html"><img src="../images/venise.jpg" height="300" width="500" alt="venise"></a>
-    </div></div>
-
-    <div class="grid-item">
-    <div id="im" class="grayscale"><a href="formulaire.html"><img src="../images/newyork.jpg" height="300" width="500" alt="newyork"></a>
-    </div></div>
+<div id="listehotels" >  
+    <p>liste des destinations</p>  
 </div>
--->
-<div id="listehotels">  
-    <p>liste des destination</p>  
-</div>
-<img src="../html/formulaire.html" alt="">
+
 <footer>
 
 <input type="button" value="remonter" id="monBouton"/>
-<br><br>
+
 
 <div id="basdepage">
 <nav>
@@ -75,8 +57,8 @@
     <a id="barre2" href="contacts.html">Contacts et à propos</a>
 </nav>
 </div>
-</footer>
+</footer><script src="../JS/script.js"></script>
 </body>  
-<script src="../JS/script.js"></script>
+
 
 </html>

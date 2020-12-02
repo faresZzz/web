@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>infos</title>
+    <script src="/site/JS/identification.js"></script>
 </head>
 <body>
     <header>
@@ -16,26 +17,24 @@
 
     </header>
     <div>
-        <form action="inscription.js" method="get">
-            Prénon : <input type="text" name="prenom" value="" autocomplete="on" >
-            <br>   
-            Nom : <input type="text" name="Nom" value="" autocomplete="on" >
-            <br>
-            Pseudo : <input type="text" name="Pseudo" value="" autocomplete="on" >
-            <br>
-            Adresse mail : <input type="text" name="email" value="" autocomplete="on" >
-            <br>
-            Mot de passe :<input type="password" name='motdpasse' value="" >
-            <br>
-            Confirmer le mot de passe : <input type="password" name='confirmermotdpasse' value="" >
-        
-         <input type="submit" value="S'inscire">
-     </form>
+
+        Prénon : <input type="text" id="prenom"  autocomplete="on" >
+        <br>   
+        Nom : <input type="text" id="Nom"  autocomplete="on" >
+        <br>
+        Adresse mail : <input type="email" id="email"  autocomplete="on" >
+        <br>
+        Mot de passe :<input type="password" id='motdpasse'  >
+        <br>
+        Confirmer le mot de passe : <input type="password" id='confirmermotdpasse' >
+    
+        <input type="button" id="inscription" onclick="identifiants()" value="S'inscrire">
+
     </div>
     <footer>
 
         <input type="button" value="remonter" id="monBouton"/>
-        
+        <input type="button" value="deconnexion" onclick="deconnexion()">
         <div id="basdepage">
         <nav>
             <a id="barre1" href="index.html" class="active" >Page d'accueil</a>

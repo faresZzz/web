@@ -1,30 +1,92 @@
 [
     { 
         "ville": "Paris",
-        "prixAdulte":50,
-        "petitDej":1,
-        "animauxOK":"oui",
-        "prixAnimaux":5  
+        "prixAdulte":500,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Europe",
+        "image":"/site/images/paris.jpg"  
     },
     { 
         "ville":"Londres",
-        "prixAdulte":40,
-        "prixPD":0,
-        "animauxOK":"oui",
-        "prixAnimaux":5  
+        "prixAdulte":400,
+        "petitDej":false,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Europe",
+        "image":"/site/images/londres.jpg"   
     },
     { 
         "ville": "New York",
-        "prixAdulte":100,
-        "petitDej":1,
-        "animauxOK":"oui",
-        "prixAnimaux":5  
+        "prixAdulte":1000,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Amerique-Nord",
+        "image":"/site/images/newyork.jpg"   
     },
     { 
         "ville": "Venise",
-        "prixAdulte":70,
-        "petitDej":1,
-        "animauxOK":"oui",
-        "prixAnimaux":5  
+        "prixAdulte":700,
+        "petitDej":true,
+        "animauxOK":false,
+        "prixAnimaux":5,
+        "continent":"Europe",
+        "image":"/site/images/venise.jpg"   
+    },
+    { 
+        "ville": "johannesburg",
+        "prixAdulte":500,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Afrique",
+        "image":"/site/images/johannesburg.jpg"  
+    },
+    { 
+        "ville": "LasVegas",
+        "prixAdulte":500,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Amerique-Nord",
+        "image":"/site/images/LasVegas.jpg"  
+    },
+    { 
+        "ville": "MachuPichu",
+        "prixAdulte":500,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Amerique-Sud",
+        "image":"/site/images/Machu-pichu.jpg"  
+    },
+    { 
+        "ville": "Rio",
+        "prixAdulte":500,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Amerique-Sud",
+        "image":"/site/images/Rio.jpg"  
+    },
+    { 
+        "ville": "sydney",
+        "prixAdulte":500,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Indonesie",
+        "image":"/site/images/sydney.jpg"  
+    },
+    { 
+        "ville": "tokyo",
+        "prixAdulte":500,
+        "petitDej":true,
+        "animauxOK":true,
+        "prixAnimaux":5,
+        "continent":"Asie",
+        "image":"/site/images/tokyo.jpg"  
     }
 ]
