@@ -23,7 +23,7 @@
         "petitDej":true,
         "animauxOK":true,
         "prixAnimaux":5,
-        "continent":"Amerique-Nord",
+        "continent":"AmeriqueNord",
         "image":"/site/images/newyork.jpg"   
     },
     { 
@@ -50,7 +50,7 @@
         "petitDej":true,
         "animauxOK":true,
         "prixAnimaux":5,
-        "continent":"Amerique-Nord",
+        "continent":"AmeriqueNord",
         "image":"/site/images/LasVegas.jpg"  
     },
     { 
@@ -59,7 +59,7 @@
         "petitDej":true,
         "animauxOK":true,
         "prixAnimaux":5,
-        "continent":"Amerique-Sud",
+        "continent":"AmeriqueSud",
         "image":"/site/images/Machu-pichu.jpg"  
     },
     { 
@@ -68,7 +68,7 @@
         "petitDej":true,
         "animauxOK":true,
         "prixAnimaux":5,
-        "continent":"Amerique-Sud",
+        "continent":"AmeriqueSud",
         "image":"/site/images/Rio.jpg"  
     },
     { 
@@ -77,7 +77,7 @@
         "petitDej":true,
         "animauxOK":true,
         "prixAnimaux":5,
-        "continent":"Indonesie",
+        "continent":"Oceanie",
         "image":"/site/images/sydney.jpg"  
     },
     { 

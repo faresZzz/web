@@ -72,13 +72,12 @@ function addDestination(listH){
 function filtre(){
     var listefiltres=[]
     let recherche=document.getElementById("recherchecase").value.toLowerCase();
-    //let datedepart=document.getElementById("datedep").value;
-    //let datefin=document.getElementById("datefin").value;
+    let continent=document.getElementById("continent").value;
     let prix=document.getElementById("prix").value;
     let pitidej=document.getElementById("petidej").checked;
     let animaux=document.getElementById("animaux").checked;
     
-    listefiltres={"recherche":recherche.toLowerCase(),"prix":prix,"pitidej":pitidej,"animaux":animaux};
+    listefiltres={"recherche":recherche.toLowerCase(),"continent":continent,"prix":prix,"pitidej":pitidej,"animaux":animaux};
     
     
     filtrage( listefiltres);
@@ -89,6 +88,9 @@ function filtrage(choix){
     listeHotels.forEach(htls=>{
         
         if (choix.prix<htls.prix){
+            listehtls.splice(listehtls.indexOf(htls),1);
+        }
+        else if (choix.continent!="All" && choix.continent!= htls.continent){
             listehtls.splice(listehtls.indexOf(htls),1);
         }
         else if(choix.recherche!="" && choix.recherche!=htls.nom.toLowerCase()){
@@ -114,6 +116,18 @@ function filtrage(choix){
     document.getElementById("afficheprix").innerHTML=prix +" euros"; 
  }
 
+ 
+function scroll(){
+    let button=document.getElementById("top")
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
+    }
+} 
+function remontrer(){
+    document.documentElement.scrollTop=0;
+}
 
  function infoHotel(val){
    AfficherTemperature(val);
@@ -134,3 +148,4 @@ function filtrage(choix){
 }
 var listeHotels;
 Recup();
+window.onscroll=function(){scroll()};

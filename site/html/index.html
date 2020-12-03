@@ -17,6 +17,7 @@
     <a id="inscrire" href="inscription.html">S'inscrire</a>
     <a id="connexion" href="connexion.html" >Se connecter</a>
     <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+    
 </header>
 
 <div id="date">
@@ -27,11 +28,21 @@
 
     <nav>
         <form action="filtre">
-            <!--
-            Date de depart: <input type="date" id="datedep"  onchange="filtre()">
+            
+            Continent <select name="continent" id="continent" onchange="filtre()">
+                <option value="All">All</option>
+                <option value="Afrique">Afrique</option> 
+                <option value="AmeriqueNord">Amerique du Nord</option>   
+                <option value="AmeriqueSud">Amerique du Sud</option> 
+                <option value="Asie">Asie</option> 
+                <option value="Europe">Europe</option> 
+                <option value="Oceanie">Océanie</option>   
+                  
+                  
+            </select>
     
-            Date de retour: <input type="date" id="datefin"   onchange="filtre()">
-            <br>-->
+            
+            <br>
             <label for="prix" >Prix: </label><input type="range" id="prix" name="prix" min="0" max="1000"  value="3000" onchange="filtre(); affichebarrePrix()" >
             <span id="afficheprix"> 1000 euros</span>
             <br>
@@ -47,10 +58,7 @@
 </div>
 
 <footer>
-
-<input type="button" value="remonter" id="monBouton"/>
-
-
+<button onclick="remontrer()" id="top" title="Remonter">Top</button>
 <div id="basdepage">
 <nav>
     <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
