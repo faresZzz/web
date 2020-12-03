@@ -26,3 +26,18 @@ button#inscription{
 button#inscription:hover {
     background-color:#476e9e;
 }
+button#deco{
+    background-color:#7892c2;
+    border-radius:28px;
+    border:1px solid #4e6096;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:17px;
+    padding:8px 19px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #283966;
+}
+button#deco:hover {
+    background-color:#476e9e;
+}

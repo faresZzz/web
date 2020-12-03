@@ -90,7 +90,7 @@ function verifDate(dateDpart,dateRetour){
 
 function findville(liste){
     for(let hotel of liste ){
-        if (ville==hotel.nom.toLowerCase()){
+        if (ville==hotel.nom){
             return hotel.prix;
         }
     }
@@ -114,13 +114,14 @@ function prix(infos){
     prixfinale+= nbJours* prixPetitDej*(nbadulte+nbenfant);
     prixfinale+= nbJours* prixanimaux; 
     document.getElementById("total").innerHTML=Math.round( prixfinale)+" euros";
-    document.getElementById("forumulaireResa").action=`recapitulatif.html?prix=${prixfinale} `
+    localStorage.setItem("price",prixfinale)
     
 }
 
 function estconnecter(){
     
     if(sessionStorage.getItem('estConnecte')!='true'){
+        Pass;
         event.preventDefault();
         document.getElementById('pasConnect').textContent ="Veuillez vous connecter";
         document.getElementById('pasConnect').style.color="red";
@@ -129,9 +130,11 @@ function estconnecter(){
 }
 
 
+
 var date=Date.now();
-var ville=new URLSearchParams(window.location.search).get("ville");
-var listeHotels
+var ville=localStorage.getItem("ville");
+var listeHotels;
+
 Recup();
 
 

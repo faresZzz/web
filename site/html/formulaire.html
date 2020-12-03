@@ -9,7 +9,7 @@
     
     <script src="/site/JS/reservation.js"></script>
 </head>
-<body>
+<body >
     <header>
         <div>
             <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
@@ -22,7 +22,7 @@
     <br><br><br>
 
 
-    <form id= "forumulaireResa" action="recapitulatif.html" method="GET" onchange="formulaire()" autocomplete="on">
+    <form id= "forumulaireResa"  action="/site/html/recapitulatif.html" method="GET" onchange="formulaire()"  autocomplete="on">
         <fieldset> <legend>Identité</legend>
             <div>
                 Nom*: <input type="text" id="nom" name="nom" >           
@@ -72,7 +72,7 @@
         </fieldset>
         <span id="total" ></span>
         <span id="pasConnect"></span>
-        <input id="reserver" type="submit" value="Réserver" onclick="estconnecter()"> 
+        <input id="reserver" type="submit"  value="Réserver" onclick="estconnecter()"> 
         <input id="effacer" type="reset" value="Effacer" >
         <button id="ajoutPanier" onclick=" estconnecter(),ajoutPanier()">Ajouter au panier</button>
         </p>

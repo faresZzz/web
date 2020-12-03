@@ -3,18 +3,26 @@ function connexion()
 {
     mail= document.getElementById("mail").value;
     motDePasse= document.getElementById("motdpasse").value;
-    console.log(mail);
-    console.log(motDePasse);
-    for(element of fichier) {
+    
+    check=true
+    for(element of comptes) {
         if (element.mail== mail && element.motDePasse== motDePasse){
             sessionStorage.setItem('estConnecte',"True");
-            console.log("bonjour ",element.prenom)
+            sessionStorage.setItem("utilisateur",JSON.stringify(element));
+            val=true;
             break;
         }
         else{
-            console.log("le nom d'utilisateur ou le mot de passe est faux");
+            check=false;
         }    
- };
+    };
+    if(check==false){
+        let faux=document.createElement('span');
+        affiche=document.getElementById("connect");
+        faux.innerText="le nom d'utilisateur ou le mot de passe est faux";
+        affiche.appendChild(faux);
+        setTimeout(function(){affiche.removeChild(faux)},1000);
+    }
 
  
 }
@@ -30,8 +38,8 @@ function Recup()
     })
     .then(function(json)
     {   
-        fichier = json;
-        console.log(fichier)
+        comptes = json;
+        
         
     })  
 }
@@ -44,7 +52,7 @@ function identifiants(){
     let identifiant={"prenom":prenom,"nom":nom,"mail":adresseMail,"motDePasse":motDePasse,"confirm":confirm};
     console.log(identifiant)
     creationCompte(identifiant);
-
+}
 function creationCompte(id){
     valide=true;
     for(personne of fichier){
@@ -59,20 +67,26 @@ function creationCompte(id){
         console.log("le mot de passe ne correcpond pas");
         }
         else{
-        sessionStorage.setItem("nouvelUtilisateur",id);
+        sessionStorage.setItem("nouvelUtilisateur",JSON.stringify(id));
         sessionStorage.setItem('estConnecte',"True");
-        console.log("connecter")
+        let ok = document.createElement("span")
+        ok.innerText="vous etes biens Inscrit et connecter"
+        document.getElementById("ins").appendChild(ok);
+        setTimeout(function(){document.getElementById('ins').removeChild(ok)},1000);
         }
     }    
     
    
-}
+
 }
 function deconnexion(){
     sessionStorage.setItem("estConnecte","False");
-
+    let ok = document.createElement("span")
+    ok.innerText="vous etes biens deconnecté"
+    document.getElementById("deco").appendChild(ok);
+    setTimeout(function(){document.getElementById('deco').removeChild(ok)},1000);
 }
-var fichier;
+var comptes;
 Recup();
 
 

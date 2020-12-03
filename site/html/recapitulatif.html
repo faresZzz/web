@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!--<script src="/site/JS/monScript.js"></script>-->
-    <script src="/site/JS/prix.js"></script>
-    <script src="/site/JS/temperature.js"></script>
+    <script src="/site/JS/recapitulatif.js"></script>
 </head>
-<body>
+<body onload="recupUrl()" id="body">
     <header>
         <div>
             <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
@@ -18,20 +16,15 @@
         <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
 
     </header>
-    <ul id="myList">
-        <li>Coffee</li>
-        <li>Tea</li>
-    </ul>
-   <p id="prix">
-       <button onclick="Recup()">clik</button>
-       
-   </p>
-
-   <br>
-   <br>
-   <p id="temp">
-       <button onclick="AfficherTemperature()">cliquer</button>
-   </p>
+    <div id="recap">
+        <p><h1>recapitulatif de la commande</h1></p>
+        <div id="infospersonnes"><h2>Information peronelles</h2></div>
+        <div id="infosVoyages"><h2>Informations pour le voyages</h2></div>
+        
+    </div>
+    <div>
+        <input type="button" value="Comfimer/ aller au payement" onclick="blague()">
+    </div>
    <footer>
 
     <input type="button" value="remonter" id="monBouton"/>

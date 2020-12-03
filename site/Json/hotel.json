@@ -6,7 +6,8 @@
         "animauxOK":true,
         "prixAnimaux":5,
         "continent":"Europe",
-        "image":"/site/images/paris.jpg"  
+        "image":"/site/images/paris.jpg",
+        "lien":"../html/formulaire.html"  
     },
     { 
         "ville":"Londres",
@@ -15,16 +16,18 @@
         "animauxOK":true,
         "prixAnimaux":5,
         "continent":"Europe",
-        "image":"/site/images/londres.jpg"   
+        "image":"/site/images/londres.jpg",
+        "lien":"../html/formulaire.html"    
     },
     { 
-        "ville": "New York",
+        "ville": "NewYork",
         "prixAdulte":1000,
         "petitDej":true,
         "animauxOK":true,
         "prixAnimaux":5,
         "continent":"AmeriqueNord",
-        "image":"/site/images/newyork.jpg"   
+        "image":"/site/images/newyork.jpg",
+        "lien":"../html/formulaire.html"    
     },
     { 
         "ville": "Venise",
@@ -33,16 +36,18 @@
         "animauxOK":false,
         "prixAnimaux":5,
         "continent":"Europe",
-        "image":"/site/images/venise.jpg"   
+        "image":"/site/images/venise.jpg",
+        "lien":"../html/formulaire.html"    
     },
     { 
-        "ville": "johannesburg",
+        "ville": "Johannesburg",
         "prixAdulte":500,
         "petitDej":true,
         "animauxOK":true,
         "prixAnimaux":5,
         "continent":"Afrique",
-        "image":"/site/images/johannesburg.jpg"  
+        "image":"/site/images/johannesburg.jpg",
+        "lien":"../html/formulaire.html"   
     },
     { 
         "ville": "LasVegas",
@@ -51,7 +56,8 @@
         "animauxOK":true,
         "prixAnimaux":5,
         "continent":"AmeriqueNord",
-        "image":"/site/images/LasVegas.jpg"  
+        "image":"/site/images/LasVegas.jpg",
+        "lien":"../html/formulaire.html"   
     },
     { 
         "ville": "MachuPichu",
@@ -60,7 +66,8 @@
         "animauxOK":true,
         "prixAnimaux":5,
         "continent":"AmeriqueSud",
-        "image":"/site/images/Machu-pichu.jpg"  
+        "image":"/site/images/Machu-pichu.jpg",
+        "lien":"../html/formulaire.html"   
     },
     { 
         "ville": "Rio",
@@ -69,24 +76,27 @@
         "animauxOK":true,
         "prixAnimaux":5,
         "continent":"AmeriqueSud",
-        "image":"/site/images/Rio.jpg"  
+        "image":"/site/images/Rio.jpg",
+        "lien":"../html/formulaire.html"   
     },
     { 
-        "ville": "sydney",
+        "ville": "Sydney",
         "prixAdulte":500,
         "petitDej":true,
         "animauxOK":true,
         "prixAnimaux":5,
         "continent":"Oceanie",
-        "image":"/site/images/sydney.jpg"  
+        "image":"/site/images/sydney.jpg",
+        "lien":"../html/formulaire.html"   
     },
     { 
-        "ville": "tokyo",
+        "ville": "Tokyo",
         "prixAdulte":500,
         "petitDej":true,
         "animauxOK":true,
         "prixAnimaux":5,
         "continent":"Asie",
-        "image":"/site/images/tokyo.jpg"  
+        "image":"/site/images/tokyo.jpg",
+        "lien":"../html/formulaire.html"   
     }
 ]
