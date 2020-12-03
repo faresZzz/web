@@ -2,6 +2,9 @@
 <html lang="fr">
 
     <head>
+    <link rel="stylesheet" href="/site/css/connexion.css">
+    <link rel="stylesheet" href="/site/css/formulaire.css">
+    <link rel="stylesheet" href="/site/css/index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/site/JS/identification.js"></script>
@@ -17,18 +20,22 @@
         <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
 
     </header>
+    <br><br>
 <div >
     <form action="connexion.js" method="get">
-     email :<input type="email" id="mail"  autocomplete="on" >
+     Email :<input type="email" id="mail"  autocomplete="on" >
      Mot de passe :<input type="password" id='motdpasse'  >
-
-     <input type="button" onclick="connexion()" value="Se connecter">
+<br><br>
+     <button id="co" onclick="connexion()" value="Se connecter">Se connecter</button>
+    <button id="deco" type="button" value="deconnexion" onclick="deconnexion()">Deconnexion</button>
  </form>
+
 </div>
+<br><br>
 <footer>
 
     <input type="button" value="remonter" id="monBouton"/>
-    <input type="button" value="deconnection" onclick="deconnexion()">
+ 
     <div id="basdepage">
     <nav>
         <a id="barre1" href="index.html" class="active" >Page d'accueil</a>

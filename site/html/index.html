@@ -44,11 +44,11 @@
             
             <br>
             <label for="prix" >Prix: </label><input type="range" id="prix" name="prix" min="0" max="1000"  value="3000" onchange="filtre(); affichebarrePrix()" >
-            <span id="afficheprix"> 1000 euros</span>
+            <div id="affichageprix"><span id="afficheprix"> 1000 €</span></div>
             <br>
-            Petit déjeuner* (non par défaut): <input type="checkbox" id="petidej"  onclick="filtre()">
+            Petit déjeuner (non par défaut): <input type="checkbox" id="petidej"  onclick="filtre()">
             <br>
-            Animaux* (non par défaut): <input type="checkbox" id="animaux"  onclick="filtre()">
+            Animaux (non par défaut): <input type="checkbox" id="animaux"  onclick="filtre()">
         </form>
     </nav>
 </div>

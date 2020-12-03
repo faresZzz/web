@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="stylesheet" href="/site/css/index.css">
+    <link rel="stylesheet" href="/site/css/inscription.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>infos</title>
@@ -16,21 +18,23 @@
         <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
 
     </header>
-    <div>
+    <br><br>
+    <div id="ins">
 
-        Prénon : <input type="text" id="prenom"  autocomplete="on" >
-        <br>   
+        <div>Prénom : <input type="text" id="prenom"  autocomplete="on" >
         Nom : <input type="text" id="Nom"  autocomplete="on" >
-        <br>
-        Adresse mail : <input type="email" id="email"  autocomplete="on" >
-        <br>
-        Mot de passe :<input type="password" id='motdpasse'  >
-        <br>
+        </div><br>
+        <div>Adresse mail : <input type="email" id="email"  autocomplete="on" >
+        </div><br>
+        <div>Mot de passe :<input type="password" id='motdpasse'  >
+ 
         Confirmer le mot de passe : <input type="password" id='confirmermotdpasse' >
-    
-        <input type="button" id="inscription" onclick="identifiants()" value="S'inscrire">
-
     </div>
+    <br>
+        <button id="inscription" onclick="identifiants()" value="S'inscrire">
+        S'inscrire</button>
+    </div>
+    <br>
     <footer>
 
         <input type="button" value="remonter" id="monBouton"/>
