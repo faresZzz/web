@@ -29,3 +29,17 @@ button#deco{
 button#deco:hover {
     background-color:#476e9e;
 }
+
+div#connect{   box-sizing: content-box;
+    border-style: solid;
+    background-color: rgb(177, 227, 250);
+    border-color:black;
+    border-radius: 10px ;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    white-space: nowrap ;
+}
+
+}

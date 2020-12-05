@@ -1,0 +1,36 @@
+div#recap{
+    box-sizing: content-box;
+    border-style: solid;
+    background-color: rgb(177, 227, 250);
+    border-color:black;
+    border-radius: 10px ;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    white-space: nowrap ;
+}
+
+button#payer{
+    background-color:#7892c2;
+    border-radius:28px;
+    border:1px solid #4e6096;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:17px;
+    padding:8px 19px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #283966;
+}
+button#payer:hover {
+    background-color:#476e9e;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+legend{font-weight: bold;
+
+}
