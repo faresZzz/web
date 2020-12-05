@@ -27,7 +27,7 @@
     </div>
 
     <nav>
-        <form action="filtre">
+        <div>
             
             Continent <select name="continent" id="continent" onchange="filtre()">
                 <option value="All">All</option>
@@ -40,8 +40,9 @@
                   
                   
             </select>
+        </div>
     
-            
+        <div class="filtre">   
             <br>
             <label for="prix" >Prix: </label><input type="range" id="prix" name="prix" min="0" max="1000"  value="3000" onchange="filtre(); affichebarrePrix()" >
             <div id="affichageprix"><span id="afficheprix"> 1000 €</span></div>
@@ -49,11 +50,11 @@
             Petit déjeuner (non par défaut): <input type="checkbox" id="petidej"  onclick="filtre()">
             <br>
             Animaux (non par défaut): <input type="checkbox" id="animaux"  onclick="filtre()">
-        </form>
+        </div>
     </nav>
 </div>
 
-<div id="listehotels" >  
+<div id="listehotels" class="grid-container" >  
       
 </div>
 
@@ -65,8 +66,7 @@
     <a id="barre2" href="contacts.html">Contacts et à propos</a>
 </nav>
 </div>
-</footer><script src="../JS/script.js"></script>
+</footer>
+<script src="../JS/script.js"></script>
 </body>  
-
-
 </html>
