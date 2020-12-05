@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta Charset="UTF-8">
+    <meta name="Menu">
+    <link rel="stylesheet" href="/triche/Website/css/style.css">
+    <link rel="stylesheet" href="/triche/Website/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id='body'>
+    <header>
+        <nav>
+            <div id="searchbar">
+                <input id="headersearch" type="search" placeholder="Rechercher une destination...">
+                <button id="headerbutton" onclick="search()"><i class="fa fa-search"></i></button>
+            </div>
+            <div id="headerlinks">
+                <a href="/triche/Website/Index.html" class="links">Accueil</a>
+                <a href="/triche/Website/html/recap.html" class="links">Récapitulatif</a>
+                <a href="/triche/Website/html/help.html" class="links">A Propos</a>
+                <a href="/triche/Website/html/contact.html" class="links" style="border:none;">Nous Contacter</a>
+                <button id="userbutton" onclick="connect()"><i class="fa fa-user-o" id="usericon"></i><div id="player"></div></button>
+            </div>
+        </nav>
+        <div id="fadediv" onclick="disconnect()"></div>
+        <!-- Permet de faire un flou de background pour le formulaire -->
+        <div id="formulaires" style="display: none; z-index:5;">
+            <div id="formcontent">
+                <h2 onclick="connectfade()" class="connectiontitle">Me connecter <i class="fa fa-chevron-right"
+                        id="connectchev"></i></h2>
+                <form id="meconnecter" style="display: none;">
+                    <p><label for="pseudo">Votre pseudo ou email : </label><input type="text" name="pseudo"
+                            id="connectid" /></p>
+                    <p><label for="password">Votre mot de passe : </label><input id="connectpwd" type="password"
+                            placeholder="mot de passe" /></p>
+                    <button id="signin">Me connecter</button>
+                </form>
+                <p class="connectiontitle">Ou alors</p>
+                <h2 onclick="registerfade()" class="connectiontitle">M'inscrire <i class="fa fa-chevron-right"
+                        id="registerchev"></i></h2>
+                <form id="minscrire" style="display: none;">
+                    <p><label for="pseudo">Votre pseudo ou email : </label><input type="text" name="pseudo"
+                            id="registerid" /></p>
+                    <p><label for="password">Votre mot de passe : </label><input class="registerpwd" id="firstPass"
+                            type="password" placeholder="mot de passe" /></p>
+                    <input class="registerpwd" id="confirmPass" type="password"
+                        placeholder="Confirmez votre mot de passe" />
+                    <button id="signup">Enregistrer</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div id="content">
+        <div id="bloccontact">
+                <input type="button" id="Envoie" value="Envoyer" onclick="">
+            <h2>Pour la moindre question vous pouvez nous contacter par mail,téléphone et les réseaux sociaux à partir
+                des liens ci-dessous :</h2>
+            <div id="contact">
+                <div id="bloc1">
+                    <p><a href="tel:+33623456789">Nous appeler</a></p>
+                </div>
+                <div id="bloc2">
+                    <p><a href="callto:facebook_account">Facebook</a></p>
+                </div>
+            </div>
+            <form action="/ma-page-de-traitement" method="post">
+                <div id="objet">
+                    <label for="Objet">Objet :</label>
+                    <input type="text" name="Objet" value="Demande de reseignement">
+                </div>
+                <div id="mail">
+                    <label for="user_mail">e-mail :</label>
+                    <input type="email" maxlength="150" name="user_mail"  value="agence.devoyage@gmail.com">
+                </div>
+                <div id="msg">
+                    <label for="user_message">Message :</label>
+                    <textarea id="user_message" name="user_message"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="/triche/Website/javascript/script.js"></script>
+
+</body>
+
+</html>

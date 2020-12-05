@@ -55,7 +55,7 @@ function identifiants(){
 }
 function creationCompte(id){
     valide=true;
-    for(personne of fichier){
+    for(personne of comptes){
         if (personne.mail== id.mail){
             console.log("un compte est deja relier a cette adresse mail");
             valide=false

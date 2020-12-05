@@ -17,7 +17,7 @@ context.stroke()
 
 
 var x= 100;
-var v=1
+var v=2.5
 function anime(){
     requestAnimationFrame(anime);
     context.clearRect(0,0,canvas.width,canvas.height)
@@ -33,3 +33,4 @@ function anime(){
     x+=v
 }
 
+anime();
