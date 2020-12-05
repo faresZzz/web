@@ -45,26 +45,11 @@ div#date {
 .grid-container{
     display: grid;
     grid-template-columns: auto auto;
-    padding: 10px;
     gap: 15px 10px;
+    padding: 10px;
 }
 
-.grid-item{
-    padding: 20px;
-    border:1px solid black;
-    font-size: 30px;
-    text-align: center;
-}
 
-.grayscale{
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.grayscale:hover  {
-    filter: blur(2px);
-    opacity: .8;
-
-}
 
 
 div#basdepage {
