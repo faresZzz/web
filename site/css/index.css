@@ -1,8 +1,14 @@
 body{background-color: white;}
 li {display: inline;}
 
-a#logo {margin-left: 10px;
+a#logo {margin-left:45%;
     display: inline;
+    
+}
+
+img {
+	max-width: 100%;
+	
 }
 
 #headerlinks {
@@ -30,15 +36,22 @@ div#date {
     text-decoration: none;
 }
 
-
+.filtre{
+  display: -moz-grid-line;
+    grid-template-columns: auto ;
+    padding: 10px;
+    
+}
 .grid-container{
     display: grid;
     grid-template-columns: auto auto;
-    padding: 5px;
+    padding: 10px;
+    gap: 15px 10px;
 }
 
 .grid-item{
-    padding: 5px;
+    padding: 20px;
+    border:1px solid black;
     font-size: 30px;
     text-align: center;
 }
