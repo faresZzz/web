@@ -3,31 +3,32 @@
  <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="/site/JS/panier.js"></script>
      <title>Document</title>
  </head>
-  <body onload="isconnect()">
- <header>
-    <div>
-        <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
-    </div>
-    <a id="inscrire" href="inscription.html">S'inscrire</a>
-    <a id="connexion" href="connexion.html" >Se connecter</a>
-    <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+<body onload="panier()">
+    <header>
+        <div>
+            <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
+        </div>
+        <a id="inscrire" href="inscription.html">S'inscrire</a>
+        <a id="connexion" href="connexion.html" >Se connecter</a>
+        <a href="panier.html"><img src="../images/panier.webp"  height="50" width="75" alt="panier"></a>
+    </header>
 
-</header>
+        <p id="connect"></p>
 
-     <p id="connect"></p>
+    <footer> 
 
-<footer>
+        <input type="button" value="remonter" id="monBouton"/>
 
-<input type="button" value="remonter" id="monBouton"/>
-
-<div id="basdepage">
-<nav>
-    <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
-    <a id="barre2" href="contacts.html">Contacts et à propos</a>
-</nav>
-</div>
-</footer>
+        <div id="basdepage">
+        <nav>
+            <a id="barre1" href="index.html" class="active" >Page d'accueil</a>
+            <a id="barre2" href="contacts.html">Contacts et à propos</a>
+        </nav>
+        </div>
+    </footer>
  </body>
+ 
  </html>

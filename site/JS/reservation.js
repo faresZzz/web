@@ -67,10 +67,9 @@ function formulaire()
     //let renseignement=document.getElementById("plus").value;
     
     jours=verifDate(depart,arrive);
-    let valeurs=[jours,nbAdultes,nbEnfants,pD,animaux]
-    console.log(valeurs);
+    let valeurs={"jours":jours,"nbAdultes":nbAdultes,"nbEnfants":nbEnfants,"pD":pD,"animaux":animaux,"depart":depart,"arrive":arrive};
     prix(valeurs)
-    
+    return valeurs
 }
 
 function verifDate(dateDpart,dateRetour){
@@ -100,14 +99,14 @@ function prix(infos){
     let prixfinale=0;
     let prixPetitDej;
     let prixanimaux;
-    let nbJours=  infos[0];
-    let nbadulte=parseInt(infos[1],10);
-    let nbenfant=parseInt( infos[2],10);
+    let nbJours=  infos.jours;
+    let nbadulte=parseInt(infos.nbAdultes,10);
+    let nbenfant=parseInt( infos.nbEnfants,10);
 
 
-    if (infos[3]== false){ prixPetitDej = 0}
+    if (infos.pD== false){ prixPetitDej = 0}
     else{prixPetitDej=12}
-    if (infos[4]== false){prixanimaux = 0}
+    if (infos.animaux== false){prixanimaux = 0}
     else{prixanimaux=12}
 
     prixfinale=nbJours*(prixhotel*(nbadulte+0.4*nbenfant));
@@ -121,20 +120,39 @@ function prix(infos){
 function estconnecter(){
     
     if(sessionStorage.getItem('estConnecte')!='true'){
-        Pass;
+        
         event.preventDefault();
         document.getElementById('pasConnect').textContent ="Veuillez vous connecter";
         document.getElementById('pasConnect').style.color="red";
-        setTimeout(function(){document.getElementById('pasConnect').textContent =""},1000);
+        setTimeout(function(){document.getElementById('pasConnect').textContent =""},2000);
+        return false;
+    }else{
+        return true;
     }
+
 }
 
+function AjoutPanier(){
+    let recap =formulaire();
+    recap.dest=ville;
+    if (estconnecter()){
+        if (sessionStorage.getItem("panier")===null){
+            console.log(sessionStorage.getItem("panier"));
+            let panier={}
+            panier.ancien=JSON.parse(sessionStorage.getItem("panier"))
+            panier.nouveau=recap;
+            sessionStorage.setItem("panier",JSON.stringify(panier))
+        }
+        else{
+            sessionStorage.setItem("panier",JSON.stringify(recap))
+        }
+    }
+}
 
 
 var date=Date.now();
 var ville=localStorage.getItem("ville");
 var listeHotels;
-
 Recup();
 
 

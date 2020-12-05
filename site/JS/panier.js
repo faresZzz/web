@@ -8,45 +8,20 @@ function isconnect(){
         Panier();
     }
 }
-function getCookie(cname) {// function getCookie prise sur W3School
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
+function panier(){
+  let pan=JSON.parse( sessionStorage.getItem("panier"));
+  console.log(pan);
+  if (pan===null){
+    document.getElementById("connect").innerHTML= "votre panier est vide";
   }
-function Panier(){
-    var panier=getCookie("panier");
-    console.log(panier);
-    if (panier!=""){
-        document.getElementById("precedent").innerHTML=panier;
-    }
-    else{
-        document.getElementById("precedent").innerHTML= "votre panier est vide"
-    }
+  else{
+    wish=document.createElement("div");
+    wish.id="wish"
+    var item=document.createElement("div");
+    item.innerText=`destination: ${pan.dest}\ndate de depart: ${pan.depart}\ndate de retour: ${pan.arrive}\n nombre d'adultes: ${pan.nbAdultes} \n nombre d'enfants: ${pan.nbEnfants}\n petit dejeuner: ${pan.pD} \n animaux: ${pan.animaux}`;
+      
+    
+    document.getElementById('connect').appendChild(item);
+    
+  }
 }
-
-function setPanier(){
-    let lieux=document.getElementById("voyage").value;
-    let prix=document.getElementById("prix").value;
-    console.log(lieux);
-    console.log(prix);
-    let voyage={"lieux":lieux, "prix": prix};
-    console.log(voyage);
-    document.cookie="panier ="+JSON.stringify(voyage)+";path=/";
-}
-
-
-//function temps(){
- // import {  AfficherTemperature } from "temperature.mjs";
- // console.log(AfficherTemperature("lyon"));
-//}
-

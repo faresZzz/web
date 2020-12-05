@@ -21,7 +21,7 @@ function connexion()
         affiche=document.getElementById("connect");
         faux.innerText="le nom d'utilisateur ou le mot de passe est faux";
         affiche.appendChild(faux);
-        setTimeout(function(){affiche.removeChild(faux)},1000);
+        setTimeout(function(){affiche.removeChild(faux)},2000);
     }
 
  
@@ -64,15 +64,15 @@ function creationCompte(id){
         } }
     if (valide){
         if (id.confirm!=id.motDePasse){
-        console.log("le mot de passe ne correcpond pas");
+        console.log(" le mot de passe ne correcpond pas");
         }
         else{
         sessionStorage.setItem("nouvelUtilisateur",JSON.stringify(id));
         sessionStorage.setItem('estConnecte',"True");
         let ok = document.createElement("span")
-        ok.innerText="vous etes biens Inscrit et connecter"
+        ok.innerText=" vous etes biens Inscrit et connecter"
         document.getElementById("ins").appendChild(ok);
-        setTimeout(function(){document.getElementById('ins').removeChild(ok)},1000);
+        setTimeout(function(){document.getElementById('ins').removeChild(ok)},2000);
         }
     }    
     
@@ -80,11 +80,20 @@ function creationCompte(id){
 
 }
 function deconnexion(){
-    sessionStorage.setItem("estConnecte","False");
-    let ok = document.createElement("span")
-    ok.innerText="vous etes biens deconnecté"
-    document.getElementById("deco").appendChild(ok);
-    setTimeout(function(){document.getElementById('deco').removeChild(ok)},1000);
+    if (sessionStorage.getItem('estConnecte')=='True'){
+        sessionStorage.setItem("estConnecte","False");
+        let ok = document.createElement("span")
+        ok.innerText=": Vous etes biens deconnecté"
+        document.getElementById("deco").appendChild(ok);
+        setTimeout(function(){document.getElementById('deco').removeChild(ok)},2000);
+    }
+    else{
+        let ok = document.createElement("span")
+        ok.innerText=": Vous n'etiez pas connect"
+        document.getElementById("deco").appendChild(ok);
+        setTimeout(function(){document.getElementById('deco').removeChild(ok)},2000);
+    }
+    
 }
 var comptes;
 Recup();
