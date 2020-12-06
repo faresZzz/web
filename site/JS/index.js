@@ -58,7 +58,7 @@ function addDestination(listH){
         var img= document.createElement("img");
         var over=document.createElement("div");
         
-        nouvDiv.className="container"+hotel.nom; 
+        nouvDiv.className="container"; 
 
         autreDest.href=hotel.lien;
         
@@ -67,7 +67,7 @@ function addDestination(listH){
         img.id=hotel.nom;
         img.className=hotel.nom;
         
-        over.className="overlay__"+hotel.nom;
+        over.className="overlay";
         over.innerText=hotel.nom
         
         autreDest.addEventListener("click",function(){localStorage.setItem("ville", hotel.nom)});
