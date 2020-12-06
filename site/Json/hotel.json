@@ -46,7 +46,7 @@
         "animauxOK":true,
         "prixAnimaux":5,
         "continent":"Afrique",
-        "image":["/site/images/johannesburg.jpg","/site/images/johannesburg2.jpg", "/site/images/johannesburg2.jpg"],
+        "image":["/site/images/johannesburg.jpg","/site/images/johannesburg2.jpg", "/site/images/johannesburg3.jpg"],
         "lien":"../html/formulaire.html"   
     },
     { 

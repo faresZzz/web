@@ -101,7 +101,7 @@ function blague(){
     ancien=bod.cloneNode(true);
     bod.innerHTML=""
     texte=document.createElement("p");
-    texte.innerHTML="Non je rigole c est une blague J'ai pas fais de page pour payer mais sa aurais du etre ca"
+    texte.innerHTML="Non je rigole c est une blague nous n'avons pas de page de payement mais ca serais la suite logique du processus. Mais pour cela il nous faudrais un minimim de PHP coté serveur."
     button=document.createElement("input");
     button.type="button";
     button.value="Tous reafficher"
@@ -110,6 +110,24 @@ function blague(){
     bod.appendChild(button);
 }
 
+function scroll() {
+    /* total copie colle de W3School*/
+    mybutton = document.getElementById("top");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } 
+    else {
+        mybutton.style.display = "none";
+    }
+}
+
+
+function remontrer() {
+    /* total copie colle de W3School*/
+  document.body.scrollTop = 0; // safari
+  document.documentElement.scrollTop = 0; // le reste
+}
 var listeHotels;
+window.onscroll=function(){scroll()};
 Recup();
 

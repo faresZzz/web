@@ -3,10 +3,11 @@
  <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="index.css">
      <script src="/site/JS/panier.js"></script>
      <title>Document</title>
  </head>
-<body onload="panier()">
+<body onload="isconnect()">
     <header>
         <div>
             <a id="logo" href="index.html"><img src="../images/logorv.jpg" alt="Rocket Voyage"></a>
@@ -17,10 +18,12 @@
     </header>
 
         <p id="connect"></p>
+        <div id="panier"></div>
 
     <footer> 
 
-        <input type="button" value="remonter" id="monBouton"/>
+        <button onclick="remontrer()" id="top" title="Remonter"><img src="/site/images/rocket.png" alt=""></button>
+        <div id="basdepage">
 
         <div id="basdepage">
         <nav>

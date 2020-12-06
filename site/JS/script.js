@@ -64,8 +64,8 @@ function addDestination(listH){
         autreDest.href=hotel.lien;
         
         autreDest.addEventListener("click",function(){localStorage.setItem("ville", hotel.nom)});
-        img.addEventListener("mouseover", function(){infoHotel(hotel.nom)});
-        //img.addEventListener('mouseout',function(){img.scr=hotel.image[0]; })
+        img.addEventListener("mouseover", function(){infoHotel(hotel.nom); defilement(hotel)});
+        img.addEventListener('mouseout',function(){stop(hotel)})
 
         aff.appendChild(nouvDiv);
         nouvDiv.appendChild(autreDest)
@@ -73,18 +73,22 @@ function addDestination(listH){
     });    
 }
 
-function defilement(htl,compteur){
+function defilement(htl){
     img=document.getElementById(htl.nom)
-    if (img.onmouseover){
-        if (compteur>htl.image){
-            compteur=0;
-        }
-        img.src=htl.image[compteur];
-        setTimeout(function(){defilement(htl,compteur+1)},2000);
-    }else{
-        img.src=htl.image[0];
+    img.src=htl.image[i];
+    if(i<htl.image.length-1){
+        i++;
     }
-    
+    else{
+        i=0
+    }
+    compteur= setTimeout(function(){defilement(htl)}, 2000)
+}
+function stop(hots){
+    clearTimeout(compteur);
+    let img=document.getElementById(hots.nom);
+    i=0;
+    img.src=hots.image[i];
 }
 
 function filtre(){
@@ -135,16 +139,22 @@ function filtrage(choix){
  }
 
  
-function scroll(){
-    let button=document.getElementById("top")
-    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-        button.style.display = "block";
-      } else {
-        button.style.display = "none";
+function scroll() {
+    /* total copie colle de W3School*/
+    mybutton = document.getElementById("top");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } 
+    else {
+        mybutton.style.display = "none";
     }
-} 
-function remontrer(){
-    document.documentElement.scrollTop=0;
+}
+
+
+function remontrer() {
+    /* total copie colle de W3School*/
+  document.body.scrollTop = 0; // safari
+  document.documentElement.scrollTop = 0; // le reste
 }
 
  function infoHotel(val){
@@ -164,6 +174,10 @@ function remontrer(){
         console.log("La temperature à " +json["name"]+" est de "+json["main"]["temp"]+" °C")
     })
 }
+
+
 var listeHotels;
+var i=0;
+var compteur;
 Recup();
 window.onscroll=function(){scroll()};

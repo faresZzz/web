@@ -1,4 +1,20 @@
-
+function Recup()
+{
+    
+    fetch("../Json/comptes.json")
+    .then(function(reponse)
+    {
+        json=reponse.json();
+        return json;
+        
+    })
+    .then(function(json)
+    {   
+        comptes = json;
+        
+        
+    })  
+}
 function connexion()
 {
     mail= document.getElementById("mail").value;
@@ -26,23 +42,7 @@ function connexion()
 
  
 }
-function Recup()
-{
-    
-    fetch("../Json/comptes.json")
-    .then(function(reponse)
-    {
-        json=reponse.json();
-        return json;
-        
-    })
-    .then(function(json)
-    {   
-        comptes = json;
-        
-        
-    })  
-}
+
 function identifiants(){
     let prenom=document.getElementById("prenom").value;
     let nom=document.getElementById("Nom").value;
@@ -50,30 +50,47 @@ function identifiants(){
     let motDePasse= document.getElementById("motdpasse").value; 
     let confirm= document.getElementById("confirmermotdpasse").value;
     let identifiant={"prenom":prenom,"nom":nom,"mail":adresseMail,"motDePasse":motDePasse,"confirm":confirm};
-    console.log(identifiant)
+    
     creationCompte(identifiant);
 }
 function creationCompte(id){
     valide=true;
-    for(personne of comptes){
-        if (personne.mail== id.mail){
-            console.log("un compte est deja relier a cette adresse mail");
-            valide=false
-            break;
-        
-        } }
-    if (valide){
-        if (id.confirm!=id.motDePasse){
-        console.log(" le mot de passe ne correcpond pas");
-        }
-        else{
-        sessionStorage.setItem("nouvelUtilisateur",JSON.stringify(id));
-        sessionStorage.setItem('estConnecte',"True");
+    
+    if( id.prenom=="" || id.nom=="" || id.mail=="" || id.motDePasse=="" || id.confirm==""){
         let ok = document.createElement("span")
-        ok.innerText=" vous etes biens Inscrit et connecter"
-        document.getElementById("ins").appendChild(ok);
-        setTimeout(function(){document.getElementById('ins').removeChild(ok)},2000);
+            ok.innerText=" veuiller remplir toutes les cases"
+            document.getElementById("ins").appendChild(ok);
+            setTimeout(function(){document.getElementById('ins').removeChild(ok)},2000);
+    }
+    else{
+        for(personne of comptes){
+            if (personne.mail== id.mail){
+                let ok = document.createElement("span")
+                ok.innerText="un compte est deja relier a cette adresse mail"
+                document.getElementById("ins").appendChild(ok);
+                setTimeout(function(){document.getElementById('ins').removeChild(ok)},2000);
+                valide=false
+                break;
+            
+            } 
         }
+        if (valide){
+            if (id.confirm!=id.motDePasse){
+                let ok = document.createElement("span")
+                ok.innerText="le mot de passe ne correcpond pas"
+                document.getElementById("ins").appendChild(ok);
+                setTimeout(function(){document.getElementById('ins').removeChild(ok)},2000);
+            }
+            else{
+            sessionStorage.setItem("nouvelUtilisateur",JSON.stringify(id));
+            sessionStorage.setItem('estConnecte',"True");
+            let ok = document.createElement("span")
+            ok.innerText=" vous etes biens Inscrit et connecter"
+            document.getElementById("ins").appendChild(ok);
+            setTimeout(function(){document.getElementById('ins').removeChild(ok)},2000);
+            }
+        }
+    
     }    
     
    
@@ -89,13 +106,32 @@ function deconnexion(){
     }
     else{
         let ok = document.createElement("span")
-        ok.innerText=": Vous n'etiez pas connect"
+        ok.innerText=": Vous n'etiez pas connecté"
         document.getElementById("deco").appendChild(ok);
         setTimeout(function(){document.getElementById('deco').removeChild(ok)},2000);
     }
     
 }
+function scroll() {
+    /* total copie colle de W3School*/
+    mybutton = document.getElementById("top");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } 
+    else {
+        mybutton.style.display = "none";
+    }
+}
+
+
+function remontrer() {
+    /* total copie colle de W3School*/
+  document.body.scrollTop = 0; // safari
+  document.documentElement.scrollTop = 0; // le reste
+}
 var comptes;
+window.onscroll=function(){scroll()};
+
 Recup();
 
 

@@ -1,7 +1,6 @@
 
 
 
-
 class destination{
     constructor(nom,prix, pitidej,animaux,image,continent,lien){
         this.nom= nom;
@@ -88,15 +87,17 @@ function verifDate(dateDpart,dateRetour){
 }
 
 function findville(liste){
+    document.getElementById("destination").innerText= "Voyage pour "+ ville;
     for(let hotel of liste ){
         if (ville==hotel.nom){
             return hotel.prix;
         }
     }
+    
 }
 function prix(infos){
     let prixhotel=findville(listeHotels);
-    let prixfinale=0;
+    prixfinal=0;
     let prixPetitDej;
     let prixanimaux;
     let nbJours=  infos.jours;
@@ -109,11 +110,11 @@ function prix(infos){
     if (infos.animaux== false){prixanimaux = 0}
     else{prixanimaux=12}
 
-    prixfinale=nbJours*(prixhotel*(nbadulte+0.4*nbenfant));
-    prixfinale+= nbJours* prixPetitDej*(nbadulte+nbenfant);
-    prixfinale+= nbJours* prixanimaux; 
-    document.getElementById("total").innerHTML=Math.round( prixfinale)+" euros";
-    localStorage.setItem("price",prixfinale)
+    prixfinal=nbJours*(prixhotel*(nbadulte+0.4*nbenfant));
+    prixfinal+= nbJours* prixPetitDej*(nbadulte+nbenfant);
+    prixfinal+= nbJours* prixanimaux; 
+    document.getElementById("total").innerHTML=Math.round( prixfinal)+" euros";
+    localStorage.setItem("price",prixfinal)
     
 }
 
@@ -135,6 +136,7 @@ function estconnecter(){
 function AjoutPanier(){
     let recap =formulaire();
     recap.dest=ville;
+    recap.prix=prixfinal;
     if (estconnecter()){
         if (sessionStorage.getItem("panier")===null){
             console.log(sessionStorage.getItem("panier"));
@@ -149,10 +151,31 @@ function AjoutPanier(){
     }
 }
 
+function scroll() {
+    /* total copie colle de W3School*/
+    mybutton = document.getElementById("top");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } 
+    else {
+        mybutton.style.display = "none";
+    }
+}
+
+
+function remontrer() {
+    /* total copie colle de W3School*/
+  document.body.scrollTop = 0; // safari
+  document.documentElement.scrollTop = 0; // le reste
+}
+
 
 var date=Date.now();
 var ville=localStorage.getItem("ville");
+
 var listeHotels;
+var prixfinal
+window.onscroll=function(){scroll()};
 Recup();
 
 
