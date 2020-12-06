@@ -56,19 +56,27 @@ function addDestination(listH){
         var nouvDiv=document.createElement("div");
         var autreDest= document.createElement("a");
         var img= document.createElement("img");
+        var over=document.createElement("div");
+        
+        nouvDiv.className="container"+hotel.nom; 
 
+        autreDest.href=hotel.lien;
+        
         img.src=hotel.image[0];
         img.alt=hotel.nom;
         img.id=hotel.nom;
+        img.className=hotel.nom;
         
-        autreDest.href=hotel.lien;
+        over.className="overlay__"+hotel.nom;
+        over.innerText=hotel.nom
         
         autreDest.addEventListener("click",function(){localStorage.setItem("ville", hotel.nom)});
-        img.addEventListener("mouseover", function(){infoHotel(hotel.nom); defilement(hotel)});
+        img.addEventListener("mouseover", function(){ defilement(hotel)});
         img.addEventListener('mouseout',function(){stop(hotel)})
 
         aff.appendChild(nouvDiv);
         nouvDiv.appendChild(autreDest)
+        nouvDiv.appendChild(over)
         autreDest.appendChild(img);
     });    
 }
@@ -82,7 +90,7 @@ function defilement(htl){
     else{
         i=0
     }
-    compteur= setTimeout(function(){defilement(htl)}, 2000)
+    compteur= setTimeout(function(){defilement(htl)}, 1500)
 }
 function stop(hots){
     clearTimeout(compteur);
@@ -158,7 +166,7 @@ function remontrer() {
 }
 
  function infoHotel(val){
-   AfficherTemperature(val);
+   return AfficherTemperature(val);
  }
  function AfficherTemperature(ville)
 {
@@ -171,7 +179,7 @@ function remontrer() {
     })
     .then(function(json)
     {
-        console.log("La temperature à " +json["name"]+" est de "+json["main"]["temp"]+" °C")
+        return("La temperature à " +json["name"]+" est de "+json["main"]["temp"]+" °C")
     })
 }
 
