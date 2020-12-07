@@ -150,7 +150,7 @@ function filtrage(choix){
 function scroll() {
     /* total copie colle de W3School*/
     mybutton = document.getElementById("top");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         mybutton.style.display = "block";
     } 
     else {
