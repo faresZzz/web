@@ -71,7 +71,7 @@ function addDestination(listH){
         over.innerText=hotel.nom
         
         autreDest.addEventListener("click",function(){localStorage.setItem("ville", hotel.nom)});
-        img.addEventListener("mouseover", function(){ defilement(hotel)});
+        img.addEventListener("mouseover", function(){defilement(hotel); AfficherTemperature(hotel.nom)});
         img.addEventListener('mouseout',function(){stop(hotel)})
 
         aff.appendChild(nouvDiv);
@@ -166,11 +166,11 @@ function remontrer() {
 }
 
  function infoHotel(val){
-   return AfficherTemperature(val);
+   console.log( val);
  }
  function AfficherTemperature(ville)
 {
-    
+    var valRen;
     let appid="bfb725a2d2eb425c0443cbcdf5c91e8f";
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+ville+"&appid="+appid+"&units=metric").then(function(reponse)
     {
@@ -179,8 +179,11 @@ function remontrer() {
     })
     .then(function(json)
     {
-        return("La temperature à " +json["name"]+" est de "+json["main"]["temp"]+" °C")
+        valRen= "La temperature à " +json["name"]+" est de "+json["main"]["temp"]+" °C"
+        infoHotel(valRen);
     })
+
+    
 }
 
 
